@@ -209,6 +209,13 @@ executable yampa-examples-tailgatingdetector
   else
     buildable: False
 
+benchmark yampa-bench
+  main-is:        Bench.hs
+  type:           exitcode-stdio-1.0
+  build-depends:  base, Yampa, criterion
+  hs-source-dirs: benchmarks
+  ghc-options:    -O2
+
 source-repository head
   type:     git
   location: git://github.com/ivanperez-keera/Yampa.git
